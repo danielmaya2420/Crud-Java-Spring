@@ -29,12 +29,12 @@ public class UserService {
     }
 
     public UserModel updateById(UserModel request, Long id){
-        UserModel user = userRepository.findById(id).get();
+        UserModel userModel = userRepository.findById(id).get();
 
-        user.setFirstName(request.getFirstName());
-        user.setLastName(request.getLastName());
-        user.setEmail(request.getEmail());
-        return user;
+        userModel.setFirstName(request.getFirstName());
+        userModel.setLastName(request.getLastName());
+        userModel.setEmail(request.getEmail());
+        return userModel;
     }
 
     public Boolean deleteUser (Long id){
